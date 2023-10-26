@@ -1,27 +1,17 @@
-# BotaniQ
+# BotaniQ Frontend
+Your virtual companion for nurturing and managing your garden's growth.  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+### Project Repositories
+- **[BotaniQ Backend](https://github.com/GabrielleYnara/BotaniQ-Backend)**: Contains the server-side code for BotaniQ.
+#
+> <p align="center">:construction: This project is currently under construction :construction:</p>
 
-## Development server
+### Project Resources
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+You can find the **Entity Relationship Diagram (ERD)** [here](https://github.com/GabrielleYnara/BotaniQ-Backend/blob/main/assets/BotaniQ%20-%20ERD.png).  
+You can view the **Wireframe** [here](https://www.figma.com/file/XPuSCSOH2gortY4YzDjYnY/BotaniQ?type=design&node-id=1%3A153&mode=design&t=sEdhlr8fbDFwkS11-1).  
+You can track the project's progress on **Trello** [here](https://trello.com/b/Phjbksmc/capstone).
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Acknowledgments
+This project was developed as part of the Software Engineering Immersive program by General Assembly.
+It serves as a capstone project to apply and reinforce skills in Angular.

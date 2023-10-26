@@ -1,0 +1,45 @@
+<div class="col garden-form">
+  <form (ngSubmit)="onSubmit()" class="needs-validation " novalidate>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="gardenDescription">Description</label>
+        <input [(ngModel)]="description" [ngModelOptions]="{standalone: true}"
+               type="text" class="form-control" id="gardenDescription" placeholder="E.g., Vertical Herb Garden, Backyard Orchard..."
+               required>
+        <div class="invalid-feedback">
+          Please provide a description to help identify and organize your garden spaces.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="gardenNotes">Notes</label>
+        <!--ToDo add small label to enhance user experience-->
+        <textarea [(ngModel)]="notes" [ngModelOptions]="{standalone: true}"
+                  class="form-control" id="gardenNotes" placeholder="Any additional notes ">
+      </textarea>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+</div>
+
+<!--ToDo add directives to handle eventlistener-->
+<!--<script>-->
+<!--  // Example starter JavaScript for disabling form submissions if there are invalid fields-->
+<!--  (function() {-->
+<!--    'use strict';-->
+<!--    window.addEventListener('load', function() {-->
+<!--      // Fetch all the forms we want to apply custom Bootstrap validation styles to-->
+<!--      var forms = document.getElementsByClassName('needs-validation');-->
+<!--      // Loop over them and prevent submission-->
+<!--      var validation = Array.prototype.filter.call(forms, function(form) {-->
+<!--        form.addEventListener('submit', function(event) {-->
+<!--          if (form.checkValidity() === false) {-->
+<!--            event.preventDefault();-->
+<!--            event.stopPropagation();-->
+<!--          }-->
+<!--          form.classList.add('was-validated');-->
+<!--        }, false);-->
+<!--      });-->
+<!--    }, false);-->
+<!--  })();-->
+<!--</script>-->
