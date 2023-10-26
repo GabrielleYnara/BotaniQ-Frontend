@@ -18,6 +18,7 @@ import { GardenComponent } from './home/garden/garden.component';
 import { GardenFormComponent } from './home/garden/garden-form/garden-form.component';
 import { PlantComponent } from './home/plant/plant.component';
 import { GardenRoutingModule } from "./home/garden/garden-routing.module";
+import { PlantFormComponent } from './home/plant/plant-form/plant-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GardenRoutingModule } from "./home/garden/garden-routing.module";
     HomeComponent,
     GardenComponent,
     GardenFormComponent,
-    PlantComponent
+    PlantComponent,
+    PlantFormComponent
   ],
     imports: [
         BrowserModule,
