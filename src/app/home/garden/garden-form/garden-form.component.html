@@ -1,26 +1,26 @@
-
-<form (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="gardenDescription">Description</label>
-      <input [(ngModel)]="description" [ngModelOptions]="{standalone: true}"
-             type="text" class="form-control" id="gardenDescription" placeholder="E.g., Vertical Herb Garden, Backyard Orchard..."
-             required>
-      <div class="invalid-feedback">
-        Please provide a description to help identify and organize your garden spaces.
+<div class="col garden-form">
+  <form (ngSubmit)="onSubmit()" class="needs-validation " novalidate>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="gardenDescription">Description</label>
+        <input [(ngModel)]="description" [ngModelOptions]="{standalone: true}"
+               type="text" class="form-control" id="gardenDescription" placeholder="E.g., Vertical Herb Garden, Backyard Orchard..."
+               required>
+        <div class="invalid-feedback">
+          Please provide a description to help identify and organize your garden spaces.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="gardenNotes">Notes</label>
+        <!--ToDo add small label to enhance user experience-->
+        <textarea [(ngModel)]="notes" [ngModelOptions]="{standalone: true}"
+                  class="form-control" id="gardenNotes" placeholder="Any additional notes ">
+      </textarea>
       </div>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="gardenNotes">Notes</label>
-      <!--ToDo add small label to enhance user experience-->
-      <textarea [(ngModel)]="notes" [ngModelOptions]="{standalone: true}"
-                class="form-control" id="gardenNotes" placeholder="Any additional notes ">
-
-      </textarea>
-    </div>
-  </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
-</form>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+</div>
 
 <!--ToDo add directives to handle eventlistener-->
 <!--<script>-->

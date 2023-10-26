@@ -24,6 +24,8 @@ export class LoginComponent {
         next: (response) => {
           console.log("Login successful", response);
           localStorage.setItem("token", response.jwt );
+          // Convert the user object to a JSON string before storing it in local storage
+          localStorage.setItem("userFirstName", response.user.profile.firstName);
           this.router.navigate(['/home']);
         },
         error: (error) => {
