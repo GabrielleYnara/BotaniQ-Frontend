@@ -1,7 +1,11 @@
-import { Component, OnInit} from '@angular/core';
-import {AuthService} from "../auth.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import { Component } from '@angular/core';
+import { AuthService } from "../auth.service";
+import { Router } from "@angular/router";
 
+/**
+ * Additional material: <br>
+ * <a href="https://angular.io/guide/router-tutorial-toh">Routing and Navigation documentation</a>
+ */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,12 +17,6 @@ export class LoginComponent {
 
   constructor(private authService: AuthService,
               private router: Router) {
-  }
-
-  loginUser(emailAddress: string, password: string){
-    console.log("email: " + emailAddress + " and password collected.");
-    this.authService.loginUser(emailAddress,password);
-
   }
 
   onSubmit() {
