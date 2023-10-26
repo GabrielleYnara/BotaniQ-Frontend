@@ -18,20 +18,20 @@ export class LoginComponent {
   constructor(private authService: AuthService,
               private router: Router) {
   }
-
   onSubmit() {
     if (this.emailAddress && this.password) {
       this.authService.loginUser(this.emailAddress, this.password).subscribe({
         next: (response) => {
-          console.log('Login successful', response);
+          console.log("Login successful", response);
+          localStorage.setItem("token", response.jwt );
           this.router.navigate(['/home']);
         },
         error: (error) => {
-          console.log('Login failed', error);
+          console.log("Login failed", error);
         }
       });
     } else {
-      console.log('Email and password are required');
+      console.log("Please provide a description to help identify and organize your garden spaces.");
     }
   }
 }
