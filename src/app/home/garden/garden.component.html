@@ -1,2 +1,18 @@
-<p>garden works!</p>
-<!--display singular or for loop-->
+<div *ngIf="garden">
+
+
+    <div class="card">
+        <div class="card-header">
+        <p>{{ garden.description }}</p>
+        </div>
+        <div class="card-body">
+            <p>Additional notes: <br>
+                {{ garden.notes }}</p>
+        </div>
+        <div class="card-body">
+            <div class="list-group">
+                <a href="#" *ngFor="let plant of garden.plantList" class="list-group-item list-group-item-action list-group-item-success">{{plant.type}}, {{plant.name}}</a>
+            </div>
+        </div>
+    </div>
+</div>
