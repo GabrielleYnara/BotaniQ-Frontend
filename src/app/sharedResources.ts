@@ -10,4 +10,8 @@ export class SharedResources {
             'Authorization': `Bearer ${localStorage.getItem("token")}`
         });
     }
+
+    protected getPlantByIdEndPoint(gardenId: string, plantId: string): string{
+        return `/gardens/${gardenId}/plants/${plantId}/`
+    }
 }
