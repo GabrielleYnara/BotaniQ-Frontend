@@ -17,6 +17,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import { GardenComponent } from './home/garden/garden.component';
 import { GardenFormComponent } from './home/garden/garden-form/garden-form.component';
 import { PlantComponent } from './home/plant/plant.component';
+import { GardenRoutingModule } from "./home/garden/garden-routing.module";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PlantComponent } from './home/plant/plant.component';
         NgbModule,
         FormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        GardenRoutingModule
     ],
   providers: [],
   bootstrap: [AppComponent]

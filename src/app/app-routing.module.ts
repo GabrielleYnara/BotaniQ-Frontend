@@ -3,7 +3,6 @@ import { RouterModule, Routes } from "@angular/router";
 import {HomeComponent} from "./home/home.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {GardenFormComponent} from "./home/garden/garden-form/garden-form.component";
-import {GardenComponent} from "./home/garden/garden.component";
 
 const routes: Routes = [
     {
@@ -11,11 +10,17 @@ const routes: Routes = [
         component: LoginComponent
     },
     {
-        path: 'home',
+        path: 'auth',
         component: HomeComponent,
         children:[
-            { path: 'newGarden', component: GardenFormComponent },
-            { path: 'garden', component: GardenComponent}
+            {
+                path: 'newGarden',
+                component: GardenFormComponent
+            },
+            {
+                path: 'garden',
+                loadChildren: () => import('./home/garden/garden-routing.module').then(module => module.GardenRoutingModule)
+            }
         ]
     }
 

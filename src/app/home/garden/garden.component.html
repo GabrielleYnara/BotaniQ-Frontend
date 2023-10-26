@@ -1,18 +1,21 @@
 <div *ngIf="garden">
-
-
     <div class="card">
         <div class="card-header">
-        <p>{{ garden.description }}</p>
+            <p>{{ garden.description }}</p>
+
         </div>
         <div class="card-body">
-            <p>Additional notes: <br>
-                {{ garden.notes }}</p>
+            <p>Additional notes:<br>
+                <span class="text-muted">{{ garden.notes }}</span> </p>
+            <button type="button" class="btn btn-outline-success" id="add-plant-btn">Add Plant</button>
         </div>
         <div class="card-body">
-            <div class="list-group">
-                <a href="#" *ngFor="let plant of garden.plantList" class="list-group-item list-group-item-action list-group-item-success">{{plant.type}}, {{plant.name}}</a>
+            <div class="list-group plant-list">
+                <p>Your plants:</p>
+                <a routerLink="plant/{{plant.id}}" *ngFor="let plant of garden.plantList" class="list-group-item list-group-item-action list-group-item-success">{{plant.type}}, {{plant.name}}</a>
+                <router-outlet></router-outlet>
             </div>
         </div>
+
     </div>
 </div>
