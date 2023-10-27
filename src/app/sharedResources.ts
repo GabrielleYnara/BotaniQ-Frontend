@@ -23,7 +23,10 @@ export class SharedResources {
         return `/gardens/${gardenId}/plants/${plantId}/cares/`;
     }
 
-    protected getAllCareTypesByPlantId(gardenId: string, plantId: string): string{
+    protected getAllCareTypesByPlantIdEndPoint(gardenId: string, plantId: string): string{
         return `/gardens/${gardenId}/plants/${plantId}/cares/`;
+    }
+    protected registerCareTrackEndPoint(gardenId: string, plantId: string, careId: string): string{
+        return `/gardens/${gardenId}/plants/${plantId}/cares/${careId}/care-tracker/`;
     }
 }

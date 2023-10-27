@@ -1,6 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import {PlantService} from "../../service/plant.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
+import {CaretypeService} from "../../service/caretype.service";
+import {CareTrackRequestModel} from "../../model/care-track-request.model";
 
 @Component({
   selector: 'app-plant',
@@ -9,30 +11,58 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class PlantComponent implements OnInit{
   plant: any;
+  date: any;
+  done: any;
+  careTrack: any;
   constructor(private plantService: PlantService,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private router: Router,
+              private careTypeService: CaretypeService) {
   }
 
   ngOnInit(): void {
     this.route.paramMap
         .subscribe( (params) => {
-          let plantInd: string = params.get("plantId") || "";
+          let plantId: string = params.get("plantId") || "";
           // Get the parent route's paramMap
           //   let gardenId: string = this.route.parent?.snapshot.paramMap.get("gardenId") || "";
           let gardenId: string = this.route.parent?.snapshot.paramMap.get("gardenId") || "";
           localStorage.setItem("gardenId", gardenId);
-          this.plantService.getSinglePlant(gardenId, plantInd)
+          this.plantService.getSinglePlant(gardenId, plantId)
               .subscribe({
                   next: (response) => {
-                      console.log(response.message);
-                      console.log(response.data);
                       this.plant = response.data;
+                      this.router.navigate(['/auth/garden/'+ gardenId + '/plant/' + plantId + '/care']);
                   },
                   error: (error) => {
                       console.log("Plant not found", error);
                   }
               })
-        })
+        });
+  }
+
+  public registerCareMinistered(careTypeId: string){
+      this.route.paramMap
+          .subscribe( (params) => {
+              let plantId: string = params.get("plantId") || "";
+              // Get the parent route's paramMap
+              //   let gardenId: string = this.route.parent?.snapshot.paramMap.get("gardenId") || "";
+              let gardenId: string = this.route.parent?.snapshot.paramMap.get("gardenId") || "";
+              this.done = true;
+              this.date = this.date.year + "-" + this.date.month + "-" + this.date.day;
+              let careTrack: CareTrackRequestModel = {done: this.done, date: this.date};
+              this.careTypeService.registerCareTrack(gardenId,plantId,careTypeId,careTrack)
+                  .subscribe({
+                      next: (response) => {
+                          this.careTrack = response.data;
+                          this.router.navigate(['/auth/garden/'+ gardenId + '/plant/' + plantId + '/care']);
+                      },
+                      error: (error) => {
+                          console.log("Plant not found", error);
+                      }
+                  })
+          });
+      this.done = false;
   }
 
 }

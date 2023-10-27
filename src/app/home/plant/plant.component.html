@@ -28,10 +28,11 @@
                     </thead>
                     <tbody>
                     <tr *ngFor="let care of plant.careTypeList">
-                        <td> {{care.type}} - {{care.frequency}} </td>
+                        <td> {{care.type}} - {{care.frequency}}
+                        </td>
                         <td>
                             <div class="custom-control custom-checkbox">
-                                <input (click)="registerCareMinistered()" type="checkbox" class="custom-control-input" id="doneCheckBox">
+                                <input [(ngModel)]="done" (click)="registerCareMinistered(care.id)" type="checkbox" class="custom-control-input" id="doneCheckBox">
                                 <label class="custom-control-label" for="doneCheckBox"> Done</label>
                             </div>
                         </td>

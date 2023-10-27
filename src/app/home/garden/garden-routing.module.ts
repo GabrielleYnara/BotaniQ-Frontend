@@ -4,6 +4,7 @@ import {GardenComponent} from "./garden.component";
 import {PlantComponent} from "../plant/plant.component";
 import {AppComponent} from "../../app.component";
 import {CareTypeFormComponent} from "../care-type/care-type-form/care-type-form.component";
+import {CareTypeComponent} from "../care-type/care-type.component";
 
 const gardenRoutes: Routes = [
     {
@@ -15,7 +16,13 @@ const gardenRoutes: Routes = [
         children: [
             {
                 path: 'plant/:plantId',
-                component: PlantComponent
+                component: PlantComponent,
+                children: [
+                    {
+                        path: 'care',
+                        component: CareTypeComponent
+                    }
+                ]
             }
         ]
     }
