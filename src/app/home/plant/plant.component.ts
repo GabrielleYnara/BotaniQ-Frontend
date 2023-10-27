@@ -9,7 +9,6 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class PlantComponent implements OnInit{
   plant: any;
-
   constructor(private plantService: PlantService,
               private route: ActivatedRoute) {
   }
@@ -19,8 +18,10 @@ export class PlantComponent implements OnInit{
         .subscribe( (params) => {
           let plantInd: string = params.get("plantId") || "";
           // Get the parent route's paramMap
+          //   let gardenId: string = this.route.parent?.snapshot.paramMap.get("gardenId") || "";
           let gardenId: string = this.route.parent?.snapshot.paramMap.get("gardenId") || "";
-          this.plantService.getSinglePlant(gardenId,plantInd)
+          localStorage.setItem("gardenId", gardenId);
+          this.plantService.getSinglePlant(gardenId, plantInd)
               .subscribe({
                   next: (response) => {
                       console.log(response.message);

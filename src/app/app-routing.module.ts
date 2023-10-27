@@ -4,6 +4,7 @@ import {HomeComponent} from "./home/home.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {GardenFormComponent} from "./home/garden/garden-form/garden-form.component";
 import {PlantFormComponent} from "./home/plant/plant-form/plant-form.component";
+import {CareTypeFormComponent} from "./home/care-type/care-type-form/care-type-form.component";
 
 const routes: Routes = [
     {
@@ -24,7 +25,11 @@ const routes: Routes = [
             },{
                 path: 'newPlant/:gardenId',
                 component: PlantFormComponent
+            },{
+                path: 'newCareType/:plantId',
+                component: CareTypeFormComponent
             }
+
         ]
     }
 

@@ -19,6 +19,8 @@ import { GardenFormComponent } from './home/garden/garden-form/garden-form.compo
 import { PlantComponent } from './home/plant/plant.component';
 import { GardenRoutingModule } from "./home/garden/garden-routing.module";
 import { PlantFormComponent } from './home/plant/plant-form/plant-form.component';
+import { CareTypeComponent } from './home/care-type/care-type.component';
+import { CareTypeFormComponent } from './home/care-type/care-type-form/care-type-form.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PlantFormComponent } from './home/plant/plant-form/plant-form.component
     GardenComponent,
     GardenFormComponent,
     PlantComponent,
-    PlantFormComponent
+    PlantFormComponent,
+    CareTypeComponent,
+    CareTypeFormComponent
   ],
     imports: [
         BrowserModule,
@@ -36,7 +40,7 @@ import { PlantFormComponent } from './home/plant/plant-form/plant-form.component
         FormsModule,
         HttpClientModule,
         AppRoutingModule,
-        GardenRoutingModule
+        GardenRoutingModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

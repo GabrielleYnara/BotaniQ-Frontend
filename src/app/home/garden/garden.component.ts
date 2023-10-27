@@ -15,7 +15,6 @@ export class GardenComponent implements OnInit{
     this.gardenService.getSingleGarden(1)
         .subscribe({
           next: (response) => {
-            console.log("Found a garden", response);
             this.garden = response.data;
           },
           error: (error) => {

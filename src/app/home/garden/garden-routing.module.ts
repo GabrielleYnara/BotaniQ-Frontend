@@ -3,13 +3,13 @@ import { RouterModule, Routes } from "@angular/router";
 import {GardenComponent} from "./garden.component";
 import {PlantComponent} from "../plant/plant.component";
 import {AppComponent} from "../../app.component";
+import {CareTypeFormComponent} from "../care-type/care-type-form/care-type-form.component";
 
 const gardenRoutes: Routes = [
     {
         path: '',
         component: AppComponent, //ToDo replace it by garden list once implemented
     },{
-    // {
         path: ':gardenId',
         component: GardenComponent,
         children: [
