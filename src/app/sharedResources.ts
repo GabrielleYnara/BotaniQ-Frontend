@@ -12,6 +12,10 @@ export class SharedResources {
     }
 
     protected getPlantByIdEndPoint(gardenId: string, plantId: string): string{
-        return `/gardens/${gardenId}/plants/${plantId}/`
+        return `/gardens/${gardenId}/plants/${plantId}/`;
+    }
+
+    protected createPlantEndPoint(gardenId: string): string{
+        return `/gardens/${gardenId}/plants/`;
     }
 }
