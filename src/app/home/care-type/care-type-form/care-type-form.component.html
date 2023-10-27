@@ -1,8 +1,9 @@
-<div class="col garden-form">
-    <form (ngSubmit)="onSubmit()" class="needs-validation " novalidate>
+<div class="col garden-form card">
+    <form (ngSubmit)="onSubmit()" class="needs-validation card-body" novalidate>
+        <h5>Register a Care Type</h5>
         <div class="form-row">
             <div class="col-md-4 mb-3">
-                <label for="plantName">Type of care to be Provided</label>
+                <label for="plantName">Care to be provided</label>
                 <input [(ngModel)]="type" [ngModelOptions]="{standalone: true}"
                        type="text" class="form-control" id="plantName" placeholder="E.g., Watering, Trimming..."
                        required>

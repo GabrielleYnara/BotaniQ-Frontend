@@ -1,13 +1,17 @@
-<div class="container">
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
+<div class="card col-md-3 login-form">
+
+  <form (ngSubmit)="onSubmit()" class="card-body mb-2">
+    <h3>BontaniQ</h3>
+    <div class="form-group mb-2">
       <label for="email">Email</label>
       <input [(ngModel)]="emailAddress" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
     </div>
-    <div class="form-group">
+    <div class="form-group mb-2">
       <label for="password">Password</label>
       <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="password" placeholder="Password">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="text-center">
+      <button type="submit" class="btn btn-success ">Login</button>
+    </div>
   </form>
 </div>
