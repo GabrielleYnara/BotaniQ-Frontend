@@ -3,10 +3,14 @@
         <div class="card-header">
             <p>{{ garden.description }}</p>
         </div>
-        <div class="card-body">
-            <p>Additional notes:<br>
+        <div class="card-body row">
+            <div class="col-9">
+                <p>Additional notes:<br>
                 <span class="text-muted">{{ garden.notes }}</span> </p>
-            <button routerLink="/auth/newPlant/{{garden.id}}" type="button" class="btn btn-outline-success" id="add-plant-btn">Add Plant</button>
+            </div>
+            <div class="col">
+                <button routerLink="/auth/newPlant/{{garden.id}}" type="button" class="btn btn-outline-success" id="add-plant-btn">Add Plant</button>
+            </div>
         </div>
         <div class="card-body">
             <div class="list-group plant-list">

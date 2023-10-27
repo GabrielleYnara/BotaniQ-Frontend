@@ -6,10 +6,38 @@
                 <p class="card-text">
                     Type: {{plant.type}}
                 </p>
-                <label for="careTypeList">Care needs:</label>
-                <ul id="careTypeList">
-                    <li *ngFor="let care of plant.careTypeList">{{care.type}} - {{care.frequency}}</li>
-                </ul>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="col-md-5 col-sm-5">Care needs:</th>
+                        <th class="col-md-2 col-sm-5">
+                            <div class="input-group ">
+
+                            <input
+                                    class="form-control"
+                                    placeholder="yyyy-mm-dd"
+                                    name="dp"
+                                    [(ngModel)]="date"
+                                    ngbDatepicker
+                                    #d="ngbDatepicker"
+                            />
+                            <button class="btn btn-outline-secondary bi bi-calendar-plus" (click)="d.toggle()" type="button"></button>
+                        </div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let care of plant.careTypeList">
+                        <td> {{care.type}} - {{care.frequency}} </td>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input (click)="registerCareMinistered()" type="checkbox" class="custom-control-input" id="doneCheckBox">
+                                <label class="custom-control-label" for="doneCheckBox"> Done</label>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
                 <button routerLink="/auth/newCareType/{{plant.id}}" type="button" class="btn btn-outline-success me-2" placement="top" ngbTooltip="Add any care you plant might need.">
                     Add Care
                 </button>
