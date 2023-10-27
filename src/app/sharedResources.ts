@@ -18,4 +18,8 @@ export class SharedResources {
     protected createPlantEndPoint(gardenId: string): string{
         return `/gardens/${gardenId}/plants/`;
     }
+
+    protected createCareTypeEndPoint(gardenId: string, plantId: string): string{
+        return `/gardens/${gardenId}/plants/${plantId}/cares/`;
+    }
 }

@@ -6,9 +6,10 @@
                 <p class="card-text">
                     Type: {{plant.type}}
                 </p>
-                <p class="card-text" >
-                    <span *ngFor="let care of plant.careTypeList">{{care.type}} - {{care.frequency}}</span>
-                </p>
+                <label for="careTypeList">Care needs:</label>
+                <ul id="careTypeList">
+                    <li *ngFor="let care of plant.careTypeList">{{care.type}} - {{care.frequency}}</li>
+                </ul>
                 <button routerLink="/auth/newCareType/{{plant.id}}" type="button" class="btn btn-outline-success me-2" placement="top" ngbTooltip="Add any care you plant might need.">
                     Add Care
                 </button>
