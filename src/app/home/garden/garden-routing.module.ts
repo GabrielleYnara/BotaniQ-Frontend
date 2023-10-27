@@ -8,7 +8,7 @@ import {GardenListComponent} from "./garden-list/garden-list.component";
 const gardenRoutes: Routes = [
     {
         path: '',
-        component: GardenListComponent, //ToDo replace it by garden list once implemented
+        component: GardenListComponent,
     },{
         path: ':gardenId',
         component: GardenComponent,

@@ -3,13 +3,10 @@
       <button routerLink="" type="button" class="list-group-item list-group-item-action" >Login</button>
       <button type="button" class="list-group-item list-group-item-action" disabled>View user's profile</button>
       <button type="button" class="list-group-item list-group-item-action" disabled>Update a user's profile</button>
-      <button routerLink="newGarden" type="button" class="list-group-item list-group-item-action" >Create a garden</button>
-      <button routerLink="garden" type="button" class="list-group-item list-group-item-action" >List gardens</button>
-      <button routerLink="garden/1" type="button" class="list-group-item list-group-item-action" >See the garden 1 and its plant list</button>
+      <button routerLink="newGarden" type="button" class="list-group-item list-group-item-action" >Create a Garden</button>
+      <button routerLink="garden" type="button" class="list-group-item list-group-item-action" >View Gardens</button>
   </div>
   <div class="col">
-      <h2 *ngIf="userName" >Hey, {{userName}}!</h2>
-      <h2 *ngIf="!userName">Hey!</h2>
       <router-outlet></router-outlet>
   </div>
 </div>

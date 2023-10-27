@@ -25,7 +25,7 @@ export class GardenService extends SharedResources{
             }));
   }
 
-  getSingleGarden(gardenId: number): Observable<any>{
+    getSingleGarden(gardenId: string): Observable<any>{
       const httpHeaders = {
           headers: this.authorizedHeader()
       };
@@ -33,6 +33,18 @@ export class GardenService extends SharedResources{
           .pipe(
               catchError(error =>{
                   console.log(`Garden retrieval failed. ${error.status}`);
+                  return throwError(() => error);
+              })
+          );
+  }
+  getAllGardens(): Observable<any>{
+      const httpHeaders = {
+          headers: this.authorizedHeader()
+      };
+      return this.http.get(this.BASE_URL + "/gardens/", httpHeaders)
+          .pipe(
+              catchError(error =>{
+                  console.log(`All gardens retrieval failed. ${error.status}`);
                   return throwError(() => error);
               })
           );
