@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient } from "@angular/common/http";
 import {catchError, Observable, throwError} from "rxjs";
 import {SharedResources} from "../sharedResources";
+import {PlantRequestModel} from "../model/plant-request.model";
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,17 @@ export class PlantService extends SharedResources{
             })
         );
   }
+  createPlant(plantRequestBody: PlantRequestModel, gardenId: string): Observable<any>{
+        const httpHeaders = {
+            headers: this.authorizedHeader()
+        };
+        return this.http.post(this.BASE_URL + this.createPlantEndPoint(gardenId), plantRequestBody, httpHeaders)
+            .pipe(
+                catchError(error =>{
+                    console.log(`Plant creation failed. ${error.status}`);
+                    return throwError(()=> error);
+                }));
+    }
+
 
 }
