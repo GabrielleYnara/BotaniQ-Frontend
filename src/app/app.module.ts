@@ -21,6 +21,7 @@ import { GardenRoutingModule } from "./home/garden/garden-routing.module";
 import { PlantFormComponent } from './home/plant/plant-form/plant-form.component';
 import { CareTypeComponent } from './home/care-type/care-type.component';
 import { CareTypeFormComponent } from './home/care-type/care-type-form/care-type-form.component';
+import { GardenListComponent } from './home/garden/garden-list/garden-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CareTypeFormComponent } from './home/care-type/care-type-form/care-type
     PlantComponent,
     PlantFormComponent,
     CareTypeComponent,
-    CareTypeFormComponent
+    CareTypeFormComponent,
+    GardenListComponent
   ],
     imports: [
         BrowserModule,
