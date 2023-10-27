@@ -28,7 +28,7 @@
                     </thead>
                     <tbody>
                     <tr *ngFor="let care of plant.careTypeList">
-                        <td> {{care.type}} - {{care.frequency}}
+                        <td routerLink="careTracker"> {{care.type}} - {{care.frequency}}
                         </td>
                         <td>
                             <div class="custom-control custom-checkbox">

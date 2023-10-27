@@ -4,6 +4,7 @@ import {GardenComponent} from "./garden.component";
 import {PlantComponent} from "../plant/plant.component";
 import {CareTypeComponent} from "../care-type/care-type.component";
 import {GardenListComponent} from "./garden-list/garden-list.component";
+import {CareTrackerComponent} from "../care-tracker/care-tracker.component";
 
 const gardenRoutes: Routes = [
     {

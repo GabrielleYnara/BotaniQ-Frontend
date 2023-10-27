@@ -1,0 +1,18 @@
+<div *ngIf="trackers">
+    <h3>{{plant}}'s care log </h3>
+
+    <table class="table">
+        <tbody>
+        <tr *ngFor="let care of trackers">
+            <td routerLink="careTracker">
+                <span *ngIf="care[1]; else notDoneIcon">✅</span>
+                <ng-template #notDoneIcon>❌</ng-template>
+                {{care[2]}} - {{care[0]}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="trackers == null ">
+    <h3>Log still empty</h3>
+</div>

@@ -29,4 +29,8 @@ export class SharedResources {
     protected registerCareTrackEndPoint(gardenId: string, plantId: string, careId: string): string{
         return `/gardens/${gardenId}/plants/${plantId}/cares/${careId}/care-tracker/`;
     }
+
+    protected getPlantCareTrackerEndPoint(gardenId: string, plantId: string): string{
+        return `/gardens/${gardenId}/plants/${plantId}/care-tracker/`;
+    }
 }

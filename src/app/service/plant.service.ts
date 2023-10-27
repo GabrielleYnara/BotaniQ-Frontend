@@ -48,4 +48,16 @@ export class PlantService extends SharedResources{
               }));
   }
 
+  getPlantCareTracker(gardenId: string, plantId: string): Observable<any>{
+      const httpHeaders = {
+          headers: this.authorizedHeader()
+      };
+      return this.http.get(this.BASE_URL + this.getPlantCareTrackerEndPoint(gardenId, plantId), httpHeaders)
+          .pipe(
+              catchError(error =>{
+                  console.log(`Plant retrieval failed. ${error.status}`);
+                  return throwError(() => error);
+              })
+          );
+  }
 }

@@ -14,6 +14,9 @@ export class PlantComponent implements OnInit{
   date: any;
   done: any;
   careTrack: any;
+  plantId: string = "";
+  gardenId: string = "";
+
   constructor(private plantService: PlantService,
               private route: ActivatedRoute,
               private router: Router,
@@ -23,16 +26,18 @@ export class PlantComponent implements OnInit{
   ngOnInit(): void {
     this.route.paramMap
         .subscribe( (params) => {
-          let plantId: string = params.get("plantId") || "";
+          this.plantId = params.get("plantId") || "";
           // Get the parent route's paramMap
           //   let gardenId: string = this.route.parent?.snapshot.paramMap.get("gardenId") || "";
-          let gardenId: string = this.route.parent?.snapshot.paramMap.get("gardenId") || "";
-          localStorage.setItem("gardenId", gardenId);
-          this.plantService.getSinglePlant(gardenId, plantId)
+          this.gardenId = this.route.parent?.snapshot.paramMap.get("gardenId") || "";
+          localStorage.setItem("gardenId", this.gardenId);
+          this.plantService.getSinglePlant(this.gardenId, this.plantId)
               .subscribe({
                   next: (response) => {
                       this.plant = response.data;
-                      this.router.navigate(['/auth/garden/'+ gardenId + '/plant/' + plantId + '/care']);
+                      localStorage.setItem("plantName", this.plant.name);
+                      console.log(response.data);
+                      this.router.navigate(['/auth/garden/'+ this.gardenId + '/plant/' + this.plantId + '/care']);
                   },
                   error: (error) => {
                       console.log("Plant not found", error);
