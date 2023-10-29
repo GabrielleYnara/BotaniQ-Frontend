@@ -10,4 +10,27 @@ export class SharedResources {
             'Authorization': `Bearer ${localStorage.getItem("token")}`
         });
     }
+
+    protected getPlantByIdEndPoint(gardenId: string, plantId: string): string{
+        return `/gardens/${gardenId}/plants/${plantId}/`;
+    }
+
+    protected createPlantEndPoint(gardenId: string): string{
+        return `/gardens/${gardenId}/plants/`;
+    }
+
+    protected createCareTypeEndPoint(gardenId: string, plantId: string): string{
+        return `/gardens/${gardenId}/plants/${plantId}/cares/`;
+    }
+
+    protected getAllCareTypesByPlantIdEndPoint(gardenId: string, plantId: string): string{
+        return `/gardens/${gardenId}/plants/${plantId}/cares/`;
+    }
+    protected registerCareTrackEndPoint(gardenId: string, plantId: string, careId: string): string{
+        return `/gardens/${gardenId}/plants/${plantId}/cares/${careId}/care-tracker/`;
+    }
+
+    protected getPlantCareTrackerEndPoint(gardenId: string, plantId: string): string{
+        return `/gardens/${gardenId}/plants/${plantId}/care-tracker/`;
+    }
 }

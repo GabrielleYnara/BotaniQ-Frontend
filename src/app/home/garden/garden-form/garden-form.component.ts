@@ -20,7 +20,7 @@ export class GardenFormComponent {
           .subscribe({
               next: (response) => {
                 console.log("Garden created!", response);
-                this.router.navigate(['/home']);
+                this.router.navigate(['/auth/garden/'+response.data.id]);
               },
               error: (error) => {
                 console.log("Garden creation failed!", error);
