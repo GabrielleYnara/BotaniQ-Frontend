@@ -1,7 +1,10 @@
 <div class="card col-md-3 login-form">
 
   <form (ngSubmit)="onSubmit()" class="card-body mb-2">
-    <h3>BontaniQ</h3>
+    <div class="justify-content-center">
+      <img src="./assets/Seed.png" alt="BotaniQ logo">
+      <h3>BontaniQ</h3>
+    </div>
     <div class="form-group mb-2">
       <label for="email">Email</label>
       <input [(ngModel)]="emailAddress" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">

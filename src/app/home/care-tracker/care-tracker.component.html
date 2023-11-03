@@ -5,7 +5,8 @@
             <tbody>
             <tr *ngFor="let care of trackers">
                 <td routerLink="careTracker">
-                    <span *ngIf="care[1]; else notDoneIcon">✅</span>
+<!--                    <span *ngIf="care[1]; else notDoneIcon"></span>-->
+                    <i *ngIf="care[1]; else notDoneIcon" class="bi bi-patch-check text-success"></i>
                     <ng-template #notDoneIcon>❌</ng-template>
                     {{care[2]}} - {{care[0]}}
                 </td>
