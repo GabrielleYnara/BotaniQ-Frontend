@@ -18,6 +18,8 @@ export class LoginComponent {
   constructor(private authService: AuthService,
               private router: Router) {
   }
+
+  //ToDo: javadoc
   onSubmit() {
     if (this.emailAddress && this.password) {
       this.authService.loginUser(this.emailAddress, this.password).subscribe({
@@ -33,7 +35,7 @@ export class LoginComponent {
         }
       });
     } else {
-      console.log("Please provide a description to help identify and organize your garden spaces.");
+      console.log("Please provide an email and password.");
     }
   }
 }

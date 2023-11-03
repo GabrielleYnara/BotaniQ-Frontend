@@ -1,9 +1,56 @@
-.card{
-    margin: 20% auto;
+/**
+  ToDo: add at least section comments
+ */
+.container {
+  display: flex;
+  justify-content: center; /* Aligns horizontally */
+  align-items: center; /* Aligns vertically */
+  min-height: 100vh; /* Full viewport height */
 }
+.card {
+  margin: auto; /* This helps to center align the card as well */
+  box-shadow: 1px 3px 8px 1px rgba(0,0,0,0.75);
+}
+
 .btn{
-    margin: 0 auto;
+  margin: 0 auto; /* centralizes the Login button */
 }
 img {
   width: 100px;
+}
+
+.login-form {
+  background-color: rgba(78, 104, 82, 0.93);
+}
+
+.card-text{
+  background-color: #C3DEBE;
+  border-radius: 50%;
+  width: min-content;
+  padding: 20px;
+  margin: 5px auto;
+  box-shadow: 1px 3px 8px -1px rgba(0,0,0,0.75);
+}
+input {
+  box-shadow: 1px 3px 8px -1px rgba(0,0,0,0.75);
+}
+label {
+  color: #EDEEED;
+}
+a {
+  font-size: small;
+  color: #8CAE91;
+}
+a:hover{
+  color: #C3DEBE;
+  text-shadow: -2px -2px 3px rgba(0,0,0,0.6);
+}
+
+/**
+  Styling for small screens
+ */
+@media screen and (max-width: 763px) {
+  .card{
+    width: 500px;
+  }
 }
