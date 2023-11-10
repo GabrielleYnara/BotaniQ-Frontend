@@ -1,4 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
 body{
-    background-color: #344834;
+  background-image: url('/assets/background_artwork.png');
+  background-size: cover;
+}
+
+@media screen and (max-width: 580px) {
+  body{
+    background-size: 135%;
+  }
+}
+
+/**
+  Styling popover
+ */
+.popover-header {
+  background-color: #889B8A;
 }

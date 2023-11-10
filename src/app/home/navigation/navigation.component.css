@@ -1,0 +1,39 @@
+/**
+  Styling navigation bar
+ */
+.navbar {
+  background-color: rgba(78, 104, 82, 0);
+}
+button, a {
+  color: #EDEEED;
+}
+.navbar-brand {
+  color: #334838;
+  background-color: rgba(231, 238, 230, 0.8);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+button:hover {
+  transform: scale(1.04); /* effect of popping up when hovering*/
+}
+
+/**
+  Styling collapsable menu
+ */
+ul {
+  margin-top: 8px;
+  background-color: rgb(78, 104, 82);
+}
+li {
+  padding-left: 20px; /* aligned with BotaniQ navbar-brand for cleaner look */
+}
+li:hover {
+  background-color: rgba(181, 209, 171, 0.82);
+  box-shadow: #334838 2px 2px;
+
+  /* grainy gradient */
+  /*background: linear-gradient(to right, rgba(181, 209, 171, 0.82), rgba(0, 0, 0, 0)),*/
+  /*  url(https://grainy-gradients.vercel.app/noise.svg);*/
+  /*filter: contrast(80%);*/
+}
+

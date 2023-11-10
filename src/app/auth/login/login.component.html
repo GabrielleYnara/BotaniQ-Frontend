@@ -1,20 +1,31 @@
-<div class="card col-md-3 login-form">
-
+<section class="container">
+<div class="card login-form col-md-5 col-lg-4">
   <form (ngSubmit)="onSubmit()" class="card-body mb-2">
-    <div class="justify-content-center">
+    <div class="card-text mb-3">
       <img src="./assets/Seed.png" alt="BotaniQ logo">
       <h3>BontaniQ</h3>
     </div>
     <div class="form-group mb-2">
       <label for="email">Email</label>
-      <input [(ngModel)]="emailAddress" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+      <input [(ngModel)]="emailAddress" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
     </div>
-    <div class="form-group mb-2">
+    <div class="form-group mb-3">
       <label for="password">Password</label>
-      <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="password" placeholder="Password">
+      <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="password" placeholder="Your Password">
     </div>
-    <div class="text-center">
-      <button type="submit" class="btn btn-success ">Login</button>
+    <div class="text-center mb-4">
+      <button type="submit" class="btn btn-success">Login</button>
+    </div>
+    <div class="d-flex justify-content-between">
+      <ng-template #popTitle>Oops!</ng-template>
+      <ng-template #popContent>
+        This feature hasn't been implemented yet.<br>
+      </ng-template>
+      <a href="#" [ngbPopover]="popContent"
+         [popoverTitle]="popTitle" placement="end">Register</a>
+      <a href="#" [ngbPopover]="popContent"
+         [popoverTitle]="popTitle">Forgot my password</a>
     </div>
   </form>
 </div>
+</section>

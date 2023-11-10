@@ -1,0 +1,31 @@
+<nav class="navbar fixed-top border-body">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="garden">
+<!--      <img src="" alt="BotaniQ logo" width="30" height="24">-->
+      BotaniQ
+    </a>
+    <button (click)="toggleNavbar()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }" id="navbarNav">
+    <ul (click)="toggleNavbar()" class="navbar-nav mr-auto" >
+      <li class="nav-item">
+        <a routerLink="garden" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="" class="nav-link">Login</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="" class="nav-link disabled" aria-disabled="true">My Profile</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="newGarden" class="nav-link">Create a Garden</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="garden" class="nav-link">View Gardens</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -18,11 +18,12 @@ export class LoginComponent {
   constructor(private authService: AuthService,
               private router: Router) {
   }
+
+  //ToDo: javadoc
   onSubmit() {
     if (this.emailAddress && this.password) {
       this.authService.loginUser(this.emailAddress, this.password).subscribe({
         next: (response) => {
-          console.log("Login successful", response);
           localStorage.setItem("token", response.jwt );
           // Convert the user object to a JSON string before storing it in local storage
           localStorage.setItem("userFirstName", response.user.profile.firstName);
@@ -33,7 +34,7 @@ export class LoginComponent {
         }
       });
     } else {
-      console.log("Please provide a description to help identify and organize your garden spaces.");
+      console.log("Please provide an email and password.");
     }
   }
 }

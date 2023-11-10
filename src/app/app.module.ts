@@ -23,6 +23,7 @@ import { CareTypeComponent } from './home/care-type/care-type.component';
 import { CareTypeFormComponent } from './home/care-type/care-type-form/care-type-form.component';
 import { GardenListComponent } from './home/garden/garden-list/garden-list.component';
 import { CareTrackerComponent } from './home/care-tracker/care-tracker.component';
+import { NavigationComponent } from './home/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CareTrackerComponent } from './home/care-tracker/care-tracker.component
     CareTypeComponent,
     CareTypeFormComponent,
     GardenListComponent,
-    CareTrackerComponent
+    CareTrackerComponent,
+    NavigationComponent
   ],
     imports: [
         BrowserModule,
