@@ -2,26 +2,16 @@ body{
   background-image: url('/assets/background_artwork.png');
   background-size: cover;
 }
+
 @media screen and (max-width: 580px) {
   body{
     background-size: 135%;
   }
 }
 
-.btn-success{
-  background-color: #6B9066;
-  border-color: #567959;
-  box-shadow: 1px 3px 5px -1px rgba(0,0,0,0.75);
-}
-.btn-success:hover{
-  background-color: #C3DEBE;
-  color: #3E5542;
-  box-shadow: none;
-}
-
+/**
+  Styling popover
+ */
 .popover-header {
-  background-color: #889b8a;
-}
-.popover-body {
-
+  background-color: #889B8A;
 }

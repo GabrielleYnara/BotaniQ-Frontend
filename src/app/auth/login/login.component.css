@@ -7,22 +7,13 @@
   align-items: center; /* Aligns vertically */
   min-height: 100vh; /* Full viewport height */
 }
-.card {
-  margin: auto; /* This helps to center align the card as well */
-  box-shadow: 1px 3px 8px 1px rgba(0,0,0,0.75);
-}
 
-.btn{
-  margin: 0 auto; /* centralizes the Login button */
-}
+/**
+  Styling for logo section
+ */
 img {
   width: 100px;
 }
-
-.login-form {
-  background-color: rgba(78, 104, 82, 0.93);
-}
-
 .card-text{
   background-color: #C3DEBE;
   border-radius: 50%;
@@ -31,19 +22,54 @@ img {
   margin: 5px auto;
   box-shadow: 1px 3px 8px -1px rgba(0,0,0,0.75);
 }
+
+/**
+  Styling form
+ */
+.login-form {
+  background-color: rgba(78, 104, 82, 0.93);
+}
+.card {
+  margin: auto; /* Aligns the card in the center*/
+  box-shadow: 1px 3px 8px 1px rgba(0,0,0,0.75);
+}
 input {
   box-shadow: 1px 3px 8px -1px rgba(0,0,0,0.75);
 }
 label {
   color: #EDEEED;
 }
+
+/**
+  Styling button
+ */
+.btn{
+  margin: 0 auto; /* centralizes the Login button */
+}
+.btn-success{
+  background-color: #6B9066;
+  border-color: #567959;
+  box-shadow: 1px 3px 5px -1px rgba(0,0,0,0.75);
+}
+.btn-success:hover{
+  /*background-color: #C3DEBE;*/
+  /*color: #3E5542;*/
+  /*box-shadow: none;*/
+  background-color: #6B9066;
+  transform: scale(1.04);
+}
+
+/**
+  Styling register and forgot my password links
+ */
 a {
   font-size: small;
   color: #8CAE91;
 }
 a:hover{
   color: #C3DEBE;
-  text-shadow: -2px -2px 3px rgba(0,0,0,0.6);
+  transform: scale(1.04);
+  /*text-shadow: -2px -2px 3px rgba(0,0,0,0.6);*/
 }
 
 /**
@@ -54,3 +80,5 @@ a:hover{
     width: 500px;
   }
 }
+
+
