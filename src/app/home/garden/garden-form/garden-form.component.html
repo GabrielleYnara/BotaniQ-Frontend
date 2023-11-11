@@ -1,11 +1,12 @@
 <div class="col garden-form card">
   <form (ngSubmit)="onSubmit()" class="needs-validation card-body" novalidate>
-    <h3>Create a virtual Garden</h3>
+    <h3>New Garden</h3>
+<!-- ToDo: Add a descriptive paragraph for easier onboarding-->
     <div class="form-row">
       <div class="col-md-4 mb-3">
         <label for="gardenDescription">Description</label>
         <input [(ngModel)]="description" [ngModelOptions]="{standalone: true}"
-               type="text" class="form-control" id="gardenDescription" placeholder="E.g., Vertical Herb Garden, Backyard Orchard..."
+               type="text" class="form-control" id="gardenDescription" placeholder="E.g. Vertical Herb Garden, Backyard Orchard..."
                required>
         <div class="invalid-feedback">
           Please provide a description to help identify and organize your garden spaces.
@@ -19,7 +20,9 @@
       </textarea>
       </div>
     </div>
-    <button class="btn btn-outline-success" type="submit">Save</button>
+    <div class="text-center">
+      <button class="btn btn-success" type="submit">Save</button>
+    </div>
   </form>
 </div>
 
