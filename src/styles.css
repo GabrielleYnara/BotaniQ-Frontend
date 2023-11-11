@@ -1,3 +1,13 @@
+:root {
+  --forest-shadow: #334838;
+  --deep-forest: #4E6852;
+  --leaf-green: #6B9066;
+  --mint: #8CAE91;
+  --sage: #B5D1AB;
+  --light-leaf: #C3DEBE;
+  --green-title: #BDCFB2;
+}
+
 body{
   background-image: url('/assets/background_artwork.png');
   background-size: cover;
@@ -9,9 +19,36 @@ body{
   }
 }
 
+.card {
+  background-color: var(--deep-forest);
+}
+input, textarea {
+  /*background-color: #BFD6B9;*/
+}
+h3, label, h5{
+  color: var(--green-title);
+}
+
 /**
   Styling popover
  */
 .popover-header {
   background-color: #889B8A;
+}
+
+/**
+  Styling button
+ */
+.btn-success{
+  background-color: #6B9066;
+  border-color: #567959;
+  box-shadow: 1px 3px 4px -1px rgba(0,0,0,0.75);
+}
+.btn-success:hover{
+  /*background-color: #C3DEBE;*/
+  /*color: #3E5542;*/
+  /*box-shadow: none;*/
+  background-color: #6B9066;
+  border-color: #567959;
+  transform: scale(1.04);
 }
