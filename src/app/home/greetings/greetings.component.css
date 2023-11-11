@@ -1,0 +1,9 @@
+h3 {
+  background-color: rgba(78, 104, 82, 0.6);
+  width: fit-content;
+  padding: 3px 20px;
+  border-radius: 10px;
+  color: #EDEEED;
+  text-shadow: var(--forest-shadow) 0 0 4px,
+               var(--forest-shadow) 1px 1px 4px;
+}
