@@ -18,14 +18,13 @@ body{
     background-size: 135%;
   }
 }
-
+/**
+  Styling card content
+ */
 .card {
   background-color: var(--deep-forest);
 }
-input, textarea {
-  /*background-color: #BFD6B9;*/
-}
-h3, label, h5{
+h3, label, h5, p{
   color: var(--green-title);
 }
 
