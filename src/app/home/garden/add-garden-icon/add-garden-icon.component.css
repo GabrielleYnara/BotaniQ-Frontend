@@ -1,0 +1,27 @@
+i {
+  position: absolute;
+  color: var(--green-title);
+  text-shadow: 1px 3px 4px -1px rgba(0,0,0,0.75);;
+}
+i:hover{
+  zoom: 1.1;
+}
+/**
+  Styling the Tooltip
+ */
+div {
+  width: fit-content;
+}
+/*!* Targeting the tooltip body *!*/
+:host ::ng-deep .tooltip-inner {
+/*.add-garden-tip .tooltip-inner{*/
+  background-color: #EDEEED;
+  color: var(--forest-shadow);
+  font-size: 80%;
+}
+/*!* Targeting the tooltip arrow *!*/
+:host ::ng-deep .bs-tooltip-top .tooltip-arrow::before {
+  margin-left: 2px;
+  border-top-color: #EDEEED;
+}
+

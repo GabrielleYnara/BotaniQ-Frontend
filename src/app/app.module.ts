@@ -25,6 +25,7 @@ import { GardenListComponent } from './home/garden/garden-list/garden-list.compo
 import { CareTrackerComponent } from './home/care-tracker/care-tracker.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
 import { GreetingsComponent } from './home/greetings/greetings.component';
+import { AddGardenIconComponent } from './home/garden/add-garden-icon/add-garden-icon.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { GreetingsComponent } from './home/greetings/greetings.component';
     GardenListComponent,
     CareTrackerComponent,
     NavigationComponent,
-    GreetingsComponent
+    GreetingsComponent,
   ],
     imports: [
         BrowserModule,
@@ -49,6 +50,7 @@ import { GreetingsComponent } from './home/greetings/greetings.component';
         HttpClientModule,
         AppRoutingModule,
         GardenRoutingModule,
+        AddGardenIconComponent,
     ],
   providers: [],
   bootstrap: [AppComponent]

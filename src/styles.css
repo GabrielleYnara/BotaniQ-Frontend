@@ -1,5 +1,5 @@
 :root {
-  --forest-shadow: #334838;
+  --forest-shadow: #1d261f;
   --deep-forest: #4E6852;
   --leaf-green: #6B9066;
   --mint: #8CAE91;
@@ -23,6 +23,7 @@ body{
  */
 .card {
   background-color: var(--deep-forest);
+  margin: 5px auto;
 }
 h3, label, h5, p{
   color: var(--green-title);
@@ -44,9 +45,6 @@ h3, label, h5, p{
   box-shadow: 1px 3px 4px -1px rgba(0,0,0,0.75);
 }
 .btn-success:hover{
-  /*background-color: #C3DEBE;*/
-  /*color: #3E5542;*/
-  /*box-shadow: none;*/
   background-color: #6B9066;
   border-color: #567959;
   transform: scale(1.04);
