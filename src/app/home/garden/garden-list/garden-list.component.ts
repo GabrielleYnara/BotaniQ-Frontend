@@ -8,16 +8,11 @@ import {GardenService} from "../../../service/garden.service";
 })
 export class GardenListComponent implements OnInit {
   gardenList: any;
-  userName: string | null = localStorage.getItem("userFirstName");
 
   constructor(private gardenService: GardenService) {
   }
 
   ngOnInit(): void {
-      this.userName = localStorage.getItem("userFirstName");
-      if (this.userName === "null"){
-          this.userName = "";
-      }
     this.gardenService.getAllGardens()
         .subscribe({
           next: (response) => {

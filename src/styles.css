@@ -23,7 +23,7 @@ body{
  */
 .card {
   background-color: var(--deep-forest);
-  margin: 5px auto;
+  margin: 15px auto;
 }
 h3, label, h5, p{
   color: var(--green-title);

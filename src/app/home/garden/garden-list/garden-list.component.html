@@ -1,21 +1,19 @@
-<h2 *ngIf="userName" >Hey, {{userName}}!</h2>
-<h2 *ngIf="!userName">Hey!</h2>
-<h5>Explore your virtual gardens below</h5>
-<!--<ul class="list-group col-sm-12 col-md-8" *ngIf="gardenList">-->
-<!--    <li routerLink="/auth/garden/{{garden.id}}" class="list-group-item d-flex justify-content-between align-items-center"-->
-<!--        *ngFor="let garden of gardenList">-->
-<!--        {{garden.description}}-->
-<!--        <span class="badge bg-success rounded-pill">{{garden.plantList.length}}</span>-->
-<!--    </li>-->
-<!--</ul>-->
+<div class="card card-body">
+  <div class="row">
+    <app-add-garden-icon></app-add-garden-icon>
+    <h5 class="text-center">Gardens</h5>
+  </div>
 
-<div class="list-group col-sm-12 col-md-8 garden-list" *ngIf="gardenList">
-    <a routerLink="/auth/garden/{{garden.id}}" *ngFor="let garden of gardenList" class="list-group-item list-group-item-action list-group-item d-flex justify-content-between align-items-center">
-        {{garden.description}}
-        <span class="badge bg-success rounded-pill">{{garden.plantList.length}}</span>
+  <div class="list-group col-sm-12 col-md-8 garden-list" *ngIf="gardenList">
+    <a routerLink="/auth/garden/{{garden.id}}" *ngFor="let garden of gardenList" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+      {{garden.description}}
+      <span class="badge bg-success-subtle text-black rounded-pill">{{garden.plantList.length}} 🌱</span>
     </a>
-</div>
-<div *ngIf="!gardenList || gardenList.length === 0">
+  </div>
+
+  <div *ngIf="!gardenList || gardenList.length === 0">
     <p>You don't have any virtual gardens yet. <br>
-        Let's <a routerLink="newGarden">create one</a> now?</p>
+      Let's <a routerLink="/auth/newGarden">create one</a> now?</p>
+  </div>
 </div>
+

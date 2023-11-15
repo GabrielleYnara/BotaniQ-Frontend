@@ -1,3 +1,16 @@
-h2, h5 {
-    color: lightgray;
+h5 {
+   text-align: center;
 }
+p a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.list-group-item:hover {
+  font-weight: bold;
+}
+.list-group-item {
+  /*background-color: ;*/
+}
+
+
