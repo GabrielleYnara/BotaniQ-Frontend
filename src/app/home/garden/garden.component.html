@@ -1,14 +1,14 @@
 <div *ngIf="garden">
     <div class="card">
         <div class="card-header">
-            <p>{{ garden.description }}</p>
+            <h5>{{ garden.description }}</h5>
         </div>
         <div class="card-body row">
-            <div class="col-9">
+            <div class="col-8">
                 <p>Additional notes:<br>
                 <span class="text-muted">{{ garden.notes }}</span> </p>
             </div>
-            <div class="col">
+            <div class="col-1">
                 <button routerLink="/auth/newPlant/{{garden.id}}" type="button" class="btn btn-outline-success" id="add-plant-btn">Add Plant</button>
             </div>
         </div>
